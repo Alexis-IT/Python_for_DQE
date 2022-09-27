@@ -6,12 +6,12 @@ def random_numbers(start_numb, end_numb, count):
     """Return random list
     Create list of {count} random numbers from {start_numb} to {end_numb}
     """
-    rand_lst = []  # initialise list for result
-    for i in range(count):  # repeat cycle {count} times
-        rand_lst.append(
-            random.randint(start_numb, end_numb))  # add random int number from [start_numb, end_numb] to result list
+     rand_lst = []  # initialise list for result
+    [rand_lst.append(random.randint(start_numb, end_numb)) for x in range(count)]
+    # for i in range(count):  # repeat cycle {count} times
+    #     rand_lst.append(
+    #         random.randint(start_numb, end_numb))  # add random int number from [start_numb, end_numb] to result list
     return rand_lst  # return result list
-
 
 def insertion_sort(lst):
     """Sort list from min to max by using insertion method."""
