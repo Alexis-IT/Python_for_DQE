@@ -78,12 +78,12 @@ def text_normalizer(some_text):
     result = ''
     for item in text_by_paragraphs:
         norm = normalize_letter_cases(item)
-        result = result + replace_iz_on_is(norm) + normalize_letter_cases(sentence_with_last_words(item)) + '\n'
+        result = result + replace_iz_on_is(norm) + '\n'
 
     result = result.replace('Homework: Homework:',
                             'Homework:')  # 'Homework: Homework:' appeared because function list_of_parafraphs(a) divide text by delmeter /n.
-
-    return result
+    finish = result + normalize_letter_cases(sentence_with_last_words(result))
+    return finish
 
 
 def number_of_spaces(some_text):
