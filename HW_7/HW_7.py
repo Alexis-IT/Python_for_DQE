@@ -38,16 +38,16 @@ def counter_of_letters_from_text(some_text):
                 cnt_uppercase[letter.lower()] = 1
     for key, values in cnt_all_letters.items():    # generate final result about letter info
         if key in cnt_uppercase:
-            cnt_all_letters[key] = [values, cnt_uppercase[key], round(values / len(my_text) * 100, 2)]
+            cnt_all_letters[key] = [values, cnt_uppercase[key], round(values / len(text_letters) * 100, 2)]
         else:
-            cnt_all_letters[key] = [values, 0, round(values / len(my_text) * 100, 2)]
+            cnt_all_letters[key] = [values, 0, round(values / len(text_letters) * 100, 2)]
     return cnt_all_letters
 
 
 def run():
     """ The main function."""
 
-    my_file = open("TTT.txt", 'r').read()
+    my_file = open("MyPublications.txt", 'r').read()
     csv.register_dialect('my_dialect', delimiter='-', lineterminator='\n', quoting=csv.QUOTE_NONE)
 
     with open("Words_info.csv", 'w') as file:
