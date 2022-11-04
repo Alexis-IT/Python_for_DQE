@@ -1,4 +1,5 @@
 import datetime
+import HW_3
 from random import randrange
 
 
@@ -27,7 +28,7 @@ def user_choice(items_list):
     return None
 
 
-def article(news):
+def article(news, publication_text):
     """Gather requirement data for correspond type of publication.
     Prepare article for publication"""
 
@@ -125,10 +126,11 @@ def run():
     """ The main function."""
     options = ["News", "Privat Ad", "Weather"]
     news_type = user_choice(options)
-    publication_text = input("Please write text of publication: ")
+    publication_text = HW_3.normalize_letter_cases(input("Please write text of publication: "))
 
     with open('MyPublications.txt', 'a') as f:  # write publication into .txt file
-        f.write(article(news_type))
+        f.write(article(news_type, publication_text))
+
 
 if __name__ == '__main__':
     run()

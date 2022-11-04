@@ -45,7 +45,7 @@ def generate_text(some_list_of_dict):
 
     fin = ''
     for article_item in some_list_of_dict:
-        print(article_item)
+        #print(article_item)
         news_type = article_item["news_type"]
         publication_text = HW_3.normalize_letter_cases(article_item["publication_text"])
         additional_info = article_item["additional_info"]
@@ -85,9 +85,34 @@ def user_option_for_path():
     return user_path
 
 
-def run():
-    """ The main function."""
+def user_choose_how_get_input():
+    """ Ask user how get input information: from file or from manual write.
+     Ask until user choose value from input list.
+        """
 
+    print("Please choose how get input information:")
+    print("1. From file")
+    print("2. Manual write")
+
+    res = None
+    while res is None:
+        res = input("Enter number: ")  # read user input
+        try:  # check if input is available
+            if int(res) == 1:
+                return "File"
+            elif int(res) == 2:
+                return "Manual"
+            else:
+                print("Choose from existing options")
+                res = None
+        except ValueError:
+            print("Input is not a number, please enter a number only")
+            res = None
+    return None
+
+
+def publication_from_file():
+    """ Publicate text from file. Remove input file if it was successfully processed """
     path_name = user_option_for_path()
     try:
         my_text = open(path_name + "PublicationInfo.txt")
@@ -99,13 +124,25 @@ def run():
         prepare_list_of_dict = get_article_info(a)
 
         oo = generate_text(prepare_list_of_dict)
-        with open(path_name + 'MyPublicationsV2.txt', 'a') as f:  # write publication into .txt file
+        with open(path_name + 'MyPublications.txt', 'a') as f:  # write publication into .txt file
             f.write(oo)
         my_text.close()
         os.remove(path_name + "PublicationInfo.txt")
         print(f"File info file has been deleted")
     except Exception as e:
         print(f"Something went wrong. {e}")
+
+
+def run():
+    """ The main function."""
+
+    input_type = user_choose_how_get_input()
+    if input_type == "File":
+        publication_from_file()
+    elif input_type == "Manual":
+        HW_5.run()
+    else:
+        print("Something went wrong")
 
 
 if __name__ == '__main__':
