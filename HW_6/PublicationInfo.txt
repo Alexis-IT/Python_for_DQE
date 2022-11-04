@@ -1,6 +1,6 @@
 news_type: Privat Ad
-publication_text: sell VIOiolin
-additional_info: 2022-10-31
+publication_text: sell gOOd PhoNe 
+additional_info: 2022-12-30
 --------------------
 news_type: News
 publication_text: Win prize
