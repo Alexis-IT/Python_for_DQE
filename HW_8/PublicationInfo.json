@@ -1,0 +1,17 @@
+{
+  "publication_1": {
+    "news_type": "News",
+    "publication_text": "Good news",
+    "additional_info": "London"
+  },
+    "publication_2": {
+    "news_type": "Privat Ad",
+    "publication_text": "Selling bike",
+    "additional_info": "2022-12-10"
+  },
+    "publication_3": {
+    "news_type": "Weather",
+    "publication_text": "test weather json",
+    "additional_info": "Lviv"
+  }
+}
