@@ -1,0 +1,17 @@
+<publications>
+ <publication>
+   <news_type>News</news_type>
+   <publication_text>News for xml file</publication_text>
+   <additional_info>Oslo</additional_info>
+ </publication>
+ <publication>
+   <news_type>Privat Ad</news_type>
+   <publication_text>Selling something in xml</publication_text>
+   <additional_info>2022-12-15</additional_info>
+ </publication>
+ <publication>
+   <news_type>Weather</news_type>
+   <publication_text>No clouds</publication_text>
+   <additional_info>Cidney</additional_info>
+ </publication>
+</publications>
