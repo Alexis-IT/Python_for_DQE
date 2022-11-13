@@ -1,0 +1,15 @@
+news_type: News
+publication_text: Win prize
+additional_info: Lviv
+--------------------
+news_type: Weather
+publication_text: test weather
+additional_info: Lviv
+--------------------
+news_type: Privat_Ad
+publication_text: sell gOOd PhoNe 
+additional_info: 2022-12-30
+--------------------
+news_type: Weather
+publication_text: Weatherrrrrrr
+additional_info: Sietl
