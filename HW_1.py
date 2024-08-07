@@ -1,3 +1,10 @@
+# TASK
+# Create a python script:
+# create list of 100 random numbers from 0 to 1000
+# sort list from min to max (without using sort())
+# calculate average for even and odd numbers
+# print both average result in console
+
 import random  # import module random (function randint) for possibility generate random numbers
 from statistics import mean  # import function mean for calculate average for numbers
 
